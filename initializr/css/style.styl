@@ -1,0 +1,159 @@
+@import "icons.styl" 
+
+a
+	color #00F
+
+a:visited
+	color #00D
+
+body 
+	background #cbf5f5
+	color #333
+	font-family "Open Sans", Arial
+	font-size 16px
+	text-align left
+
+header
+	background #222 
+	border-bottom 3px solid #0AF
+	color #DDD
+	margin 0
+	padding 0.5em
+	width 100%
+	position fixed
+
+	img
+		width 100%
+
+	h1
+		font-family "Nunito", Aria
+		font-size 15px
+		font-weight normal
+		margin 0
+		padding 0
+
+	#avatar, #logo, #title_nav
+		display inline-block
+		vertical-align top
+
+	#avatar, #logo
+		height 40px
+		width 40px
+
+	#avatar a
+		background #444
+		display block
+		margin 0
+		padding 3px
+		text-decoration none
+
+
+	#title_nav
+		width 70%
+
+		nav a
+			color #fff
+			border-bottom 1px solid #0AF
+			border-left 1px solid #0AF
+			border-right 1px solid #0AF
+			font-size 0.8em
+			padding 0.1em 1em
+			text-decoration none
+
+		nav a:hover
+			border-color white
+
+#content
+	padding 4em 0.5em
+
+	#note
+		background #fafaD6
+		border-radius 1em
+		font-size 0.7em
+		height 1em
+		margin 1em
+		overflow hidden
+		padding 2em
+		text-align justify
+		transition all 0.5s ease
+
+	#note:hover
+		height auto
+
+	.item
+		background white
+		border 2px solid #DDD
+		border-radius 0.5em
+		margin 0.5em 0 0 0
+		overflow hidden
+		padding 0.5em
+
+		h2
+			font-size 16px 
+			margin 0
+			padding 0
+			
+		.autor
+			font-size 0.7em
+			margin -3em 0 0 15%
+			
+			p 
+				display inline
+
+			.icon-shocked
+				color #f66
+				cursor pointer
+				display inline-block
+				font-size 1.3em
+				vertical-align middle
+
+			.icon-shocked:hover:before
+				color green
+				content "\e603"
+
+
+			.tag
+				background #80CCb2
+				border-radius 0.5em
+				color #fff
+				cursor pointer
+				display inline-block
+				font-weight bold
+				margin 0 0 2px 1em
+				padding 0.5em
+
+			.tag:hover
+				background #589D86
+		
+		.title_item, .voto
+			display inline-block
+			vertical-align top
+
+		.title_item
+			width 80%
+
+			figure
+				float right
+
+				img
+					width 4em
+
+		.voto
+			text-align center
+			width 14%
+
+			a
+				text-decoration none
+				transition all 1s ease
+
+			a:hover 
+				font-size 1.2em
+
+			.down
+				color #ffB341
+
+			.up 
+				color #4B8FF5
+
+
+@import "responsive.styl"
