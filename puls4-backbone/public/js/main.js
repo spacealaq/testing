@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	console.log('main.js loaded');
 	window.views.app = new Puls4.Views.App( $('body') );
+	window.routers.base = new Puls4.Routers.Base();
 
 	window.ponyExpress = new PonyExpress({
 		io : window.location.origin
@@ -24,6 +25,13 @@ $(document).ready(function(){
 		view.render();
 		view.$el.prependTo('.posts');
 	});
-	window.collections.articles.fetch();
+	var xhr = window.collections.articles.fetch();
+
+	xhr.done(function(){
+		Backbone.history.start({
+			root : '/',
+			pushState:true
+		})
+	});
 
 });

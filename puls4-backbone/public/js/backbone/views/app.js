@@ -1,7 +1,13 @@
 Puls4.Views.App = Backbone.View.extend({
 	events : {
 		"click .publicar"	:"showForm",
-		"submit form" 		:"createPost"
+		"submit form" 		:"createPost",
+		"click .logo" 		:"navigateHome"
+
+	},
+	navigateHome : function(){
+		console.log('go to home');
+		Backbone.history.navigate('/',{trigger:true})
 	},
 	initialize : function($el){
 		this.$el = $el;
